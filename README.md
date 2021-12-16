@@ -1,6 +1,11 @@
 # tri
 Triangulation rocks the nation. ∆
 
+**Might be interesting:**
+- [https://tympanus.net/Development/PageTransitions/](https://tympanus.net/Development/PageTransitions/)
+- [https://medium.com/swlh/smooth-screen-transitions-on-react-native-svg-lottie-433467b752e3](https://medium.com/swlh/smooth-screen-transitions-on-react-native-svg-lottie-433467b752e3)
+- [React Router DOM Docs](https://reactrouter.com/docs/en/v6/getting-started/installation)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
