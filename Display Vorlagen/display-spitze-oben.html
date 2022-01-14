@@ -5,6 +5,22 @@
     <meta charset="utf-8">
     <title>Dreieck</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
+    <style>
+        #background {
+            background-image: url("background-wallpaper.jpg");
+            background-size: cover;
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            width: 650px;
+            height: 562px;
+            position: absolute;
+            left: 625px;
+            top: 219px;
+        }
+
         #display-mask {
             position: absolute;
             top: 0px;
@@ -13,21 +29,14 @@
             height: 100%;
             z-index: 100;
         }
-
-        #menu {
-            position: absolute;
-            background: #555555;
-            color: white;
-            top: 715px;
-            left: 625px;
-        }
     </style>
 </head>
 
 <body>
-    <!-- Beispiel-Menu -->
-    <div id="menu" style="width: 650px; padding: 10px; text-align: center;">
-        <p>Menü</p>
+    <!-- Hintergrund-Szene -->
+    <div id="background">
+        <h1 style="font-size: 70px; margin-top: 200px;">13:52</h1>
+        <h2 style="font-size: 22px; margin-top: -50px;">Mo, 11. Januar</h2>
     </div>
     <!-- Maske für den Display -->
     <svg id="display-mask" width="1900" height="1000">
