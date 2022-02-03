@@ -1,0 +1,20 @@
+.wrapper {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: linear-gradient(45deg, #8460ed, #ff1252);
+  width: 600px;
+  height: 520px;
+  position: absolute;
+}
+
+.triangle {
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.buttonrow {
+  height: 173.333333333px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}

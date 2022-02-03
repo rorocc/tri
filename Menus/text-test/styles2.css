@@ -1,0 +1,35 @@
+.box {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: #25c7c7;
+  background-image: linear-gradient(90deg, #25c7c7 0%, #fc00ff 100%);
+
+  border-color: black;
+  box-shadow: 10px 5px 5px black;
+  width: 600px;
+  height: 520px;
+  position: absolute;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  hyphens: auto;
+}
+.box .left {
+  height: 1px;
+  float: left;
+  clear: left;
+  top: 1px;
+  position: relative;
+}
+.box .right {
+  height: 1px;
+  float: right;
+  clear: right;
+  top: 1px;
+  position: relative;
+}
+h1 {
+  text-align: center;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
