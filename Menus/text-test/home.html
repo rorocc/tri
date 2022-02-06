@@ -17,8 +17,9 @@
 <body class="has-background-dark">
   <div class="mt-4 wrapper">
 
-    <div class="apps">
-    <div class="grid px-6">
+
+    <div id="appContainer" class="apps">
+    <div id="grid" class="grid px-6">
 
       <a class="col has-text-centered has-text-white" href="index2.html"> Nachrichten
         <img id="triangle" src="icons\chat2_icon.svg" alt="" width="90%">
@@ -31,14 +32,17 @@
       <a class="col has-text-centered has-text-white" href="index2.html"> Gesundheit<img id="triangle" src="icons\heart_icon.svg" alt="" width="90%"></a>
       <a class="col has-text-centered has-text-white" href="index2.html"> Bilder<img id="triangle" src="icons\image_icon.svg" alt="" width="90%"></a>
       <a class="col has-text-centered has-text-white" href="index2.html"> Mail<img id="triangle" src="icons\paperplane_icon.svg" alt=""width="90%"></a>
-        <div class="col has-text-centered has-text-white"> Menü<svg id="menu" class="has-text-white"
-          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90%" height="90%"
-          viewBox="0 0 100 100">
-          <polygon points="0 0, 100 0, 50 86" />
-        </svg></div>
+
 
       </div>
     </div>
+    
+      <div class="menuButton has-text-centered has-text-white" onclick="openNav()"><svg id="menu" class="has-text-white"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
+        viewBox="0 0 100 100">
+        <polygon points="0 0, 100 0, 50 86" />
+      </svg></div>
+    
 
     <!--    <div class="columns px-6 buttonrow ">
       <a class="column has-text-centered" href="">
@@ -114,8 +118,46 @@
         
       </a>
     </div> -->
+
+    <div id="nav" class="nav">
+      <div class="grid">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <a class="col" href="">About</a>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <a class="col" href="">Text</a>
+      </div>
+    </div>
+    </div> 
   </div>
+
+
 </body>
-<script></script>
+<script>
+  let navOpen = false;
+  function openNav(){
+    console.log("CLICK")
+    if (!navOpen){
+      
+    document.getElementById("nav").style.height ="100%"
+    document.getElementById("nav").style.width = "100%"
+    document.getElementById("appContainer").style.width = "75%"
+    document.getElementById("grid").style["grid-template-rows"] = "80px"
+    
+    navOpen = true;
+    }
+    else{
+      document.getElementById("nav").style.height = "0%"
+      document.getElementById("nav").style.width = "0%"
+      document.getElementById("appContainer").style.width = "100%"
+      document.getElementById("grid").style["grid-template-rows"] = "120px"
+      navOpen = false;
+
+    }
+    
+  }
+</script>
 
 </html>
