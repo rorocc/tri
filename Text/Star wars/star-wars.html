@@ -21,7 +21,7 @@
     }
 
     #Textinhalt {
-      transform: rotateX(-33deg) translate3d(0, 120px, 0);
+      transform: rotateX(-93deg) translate3d(0, 920px, -870px);
     }
 
     h1 {
@@ -29,6 +29,7 @@
     }
 
     P {
+      font-size: 20px;
       text-align: justify;
     }
   </style>
@@ -69,6 +70,37 @@
         feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
         delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
       </p>
+      <h1>Star Wars Text</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita
+        kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+        justo
+        duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita
+        kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+        justo
+        duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+      </p>
     </div>
   </div>
 </body>
@@ -76,7 +108,7 @@
 <script>
   dragElement(document.getElementById("clip-triangle"));
 
-  var initialTransform = 120;
+  var initialTransform = 920;
 
   function dragElement(elmnt) {
     var pos2 = 0,
@@ -114,7 +146,7 @@
       initialTransform = initialTransform - pos2;
       console.log("initialTransform: " + initialTransform);
       // set the element's new position:
-      document.getElementById("Textinhalt").style.transform = 'rotateX(-33deg) translate3d(0, ' + initialTransform + 'px, 0)';
+      document.getElementById("Textinhalt").style.transform = 'rotateX(-93deg) translate3d(0, ' + initialTransform + 'px, -870px)';
     }
 
     function elementDragTouch(e) {
@@ -127,7 +159,7 @@
       initialTransform = Math.round(initialTransform - pos2);
       console.log("initialTransform: " + initialTransform);
       // set the element's new position:
-      document.getElementById("Textinhalt").style.transform = 'rotateX(-33deg) translate3d(0, ' + initialTransform + 'px, 0)';
+      document.getElementById("Textinhalt").style.transform = 'rotateX(-93deg) translate3d(0, ' + initialTransform + 'px, -870px)';
     }
 
     function closeDragElement() {
