@@ -5,6 +5,15 @@
   height: 520px;
   position: absolute;
 }
+
+.gallery-wrapper{
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color:rgb(92,92,92);
+  width: 600px;
+  height: 520px;
+  position: absolute;
+}
+
 .apps {
   width: 600px;
   height: 520px;
