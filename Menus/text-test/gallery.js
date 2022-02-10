@@ -7,14 +7,15 @@ let tempScale;
 let galleryContextString = "Galerie";
 let mouseDragX;
 let mouseDragDir = 0;
-let imgV1, imgV2, imgV3, imgV4;
-let i1pre;
-let imageBuffer, imageBufferX;
-
+let imgV1, imgV2, imgV3, imgV4, imgWheel;
+let i1pre, i2pre;
+let imageBuffer, imageBufferX, galleryWheel;
+let rotationAngle =0;
 function preload(){
   imgV1 = loadImage("assets/gallery/vacation1.jpg")
   i1pre = loadImage("assets/gallery/vacation1.jpg")
   imgV2 = loadImage("assets/gallery/vacation2.jpg")
+  i2pre = loadImage("assets/gallery/vacation2.jpg")
   imgV3 = loadImage("assets/gallery/vacation3.jpg")
   imgV4 = loadImage("assets/gallery/vacation4.jpg")
 }
@@ -32,6 +33,7 @@ function setup() {
   function draw() {
   clear();
   noStroke();
+  
     if(changeFlag){
       if(!navOpen){
         animationFlag = true;
@@ -45,7 +47,7 @@ function setup() {
       }
       changeFlag = false;
       
-      console.log(tempScale)
+      console.log("tempScale",tempScale)
     }
 
     if(animationFlag){
@@ -70,11 +72,6 @@ function setup() {
     getGalleryPreview();
     getGalleryFirstLine();
     getGalleryTopbar();
-    pg.ellipse(pg.width / 2, pg.height / 2, 50, 50);
-    galleryImg = image(pg, 00, 0);
-    //image(pg, 0, 0, 50, 50);
-    fill(0, 0, 255);
-    circle(100, 100, 25);
   }
 
   function getGalleryTopbar(){
@@ -86,6 +83,7 @@ function setup() {
   }
 
   function getGalleryFirstLine(){
+    imageMode(CORNER);
     imgV1.resize(200,0);
     imgV2.resize(200,0);
     imgV3.resize(200,0);
@@ -95,25 +93,60 @@ function setup() {
     imageBuffer.image(imgV3,imgV1.width+imgV2.width,0);
     imageBuffer.image(imgV4,imgV1.width+imgV2.width+imgV3.width,0);
 
-    imageBufferX += 2.5*mouseDragDir;
-    console.log(imageBufferX)
-    if(imageBufferX < -215){
-      imageBufferX = -215;
-    }else if(imageBufferX > 10){
-      imageBufferX = 10
+    if(mouseY < height/4){
+      imageBufferX += 2.5*mouseDragDir;
+      if(imageBufferX < -215){
+        imageBufferX = -215;
+      }else if(imageBufferX > 10){
+        imageBufferX = 10
+      }
     }
-
     image(imageBuffer, imageBufferX,0)
+    noStroke();
+
+     
+
+    let c = color('rgba(0, 0, 0, 1)');
+    let d =  color('rgba(0, 0, 0, 0)');
+    setGradient(0,imageBuffer.height*2/3, width, imageBuffer.height/3, d, c, 1);
+
+    fill(255,255,255)
+    rect(imageBufferX,imageBuffer.height-5, 200, 5) 
+
     if(mouseDragDir >0){
       mouseDragDir -= 0.25
     }else if(mouseDragDir <0){
       mouseDragDir += 0.25
     }else if(mouseDragDir === 0){
-    }
-  }
+    }  
 
+  }
+let angle = 0;
   function getGalleryPreview(){
-    image(i1pre,10,20,width-75,0)
+    
+    console.log("rot", angle)
+
+    push()
+      if(mouseY > height/4){
+        translate(width/2, height)
+        if(angle > -65){
+          angle -= 5;
+        }
+        rotate(PI/180 * angle)
+        translate(-width/2, -height)
+      }else angle=0;
+    
+    i1pre.resize(0,height)
+    i2pre.resize(0,height)
+    image(i1pre,0,0)
+    push()
+    imageMode(CORNER);
+    translate(width/2,height)
+    rotate(PI/180 * 30)
+    translate(0,-height)
+    image(i2pre,0,0)
+    pop()
+    pop()
   }
 
   function mouseClicked(event) {
@@ -130,6 +163,28 @@ function setup() {
 
   function touchMoved(event){
     console.log(event)
+  }
+
+  function setGradient(x, y, w, h, c1, c2, axis) {
+    noFill();
+  
+    if (axis === 1) {
+      // Top to bottom gradient
+      for (let i = y; i <= y + h; i++) {
+        let inter = map(i, y, y + h, 0, 1);
+        let c = lerpColor(c1, c2, inter);
+        stroke(c);
+        line(x, i, x + w, i);
+      }
+    } else if (axis === 2) {
+      // Left to right gradient
+      for (let i = x; i <= x + w; i++) {
+        let inter = map(i, x, x + w, 0, 1);
+        let c = lerpColor(c1, c2, inter);
+        stroke(c);
+        line(i, y, i, y + h);
+      }
+    }
   }
 
   function openNav(){

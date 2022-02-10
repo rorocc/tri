@@ -1,4 +1,6 @@
 .wrapper {
+  margin-top: 27px;
+  margin-left: 27px;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   background: linear-gradient(45deg, #8460ed, #ff1252);
   width: 600px;
@@ -6,7 +8,13 @@
   position: absolute;
 }
 
+.triframe{
+  position: absolute;
+  pointer-events: none;
+}
+
 .gallery-wrapper{
+  margin-top: 27px!important;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   background-color:rgb(92,92,92);
   width: 600px;
