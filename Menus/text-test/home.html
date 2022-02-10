@@ -121,13 +121,16 @@
 
     <div id="nav" class="nav">
       <div class="grid">
-        <div class="col">1</div>
-        <div class="col">2</div>
+        <div  class="col">1</div>
+        <div  class="col">2</div>
         <div class="col">3</div>
-        <a class="col" href="">About</a>
+        <a id="col1"class="col has-text-centered has-text-white" href="">Home</a>
         <div class="col">5</div>
         <div class="col">6</div>
-        <a class="col" href="">Text</a>
+        <a id="col1"class="col has-text-centered has-text-white" href="">Settings</a>
+        <div class="col">7</div>
+        <a id="col1"class="col has-text-centered has-text-white" href="">Contacts</a>
+        <a class="col" href=""></a>
       </div>
     </div>
     </div> 
@@ -141,16 +144,19 @@
     console.log("CLICK")
     if (!navOpen){
       
-    document.getElementById("nav").style.height ="100%"
-    document.getElementById("nav").style.width = "100%"
+    /* document.getElementById("nav").style.height ="100%"
+    document.getElementById("nav").style.width = "100%" */
+    document.getElementById("nav").style.left = "0"
     document.getElementById("appContainer").style.width = "75%"
+    
     document.getElementById("grid").style["grid-template-rows"] = "80px"
     
     navOpen = true;
     }
     else{
-      document.getElementById("nav").style.height = "0%"
-      document.getElementById("nav").style.width = "0%"
+      /* document.getElementById("nav").style.height = "0%"
+      document.getElementById("nav").style.width = "0%" */
+      document.getElementById("nav").style.left = "50%"
       document.getElementById("appContainer").style.width = "100%"
       document.getElementById("grid").style["grid-template-rows"] = "120px"
       navOpen = false;
