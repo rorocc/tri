@@ -1,0 +1,31 @@
+#topbar{
+    position: relative;
+    top:0;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+    padding:5px;
+    background-color: rgba(0,0,0,1);
+}
+
+#slider{
+  display: flex;
+  cursor: grab;
+  overflow-x: auto;
+}
+
+#slider img{
+  touch-action: none;
+  width: 25%;
+  height: auto;
+  grid-row: 1;
+}
+
+.img-selected{
+  border-bottom: 8px solid white;
+}
+
+#appContainer{
+  width:100%;
+  min-height:50px;
+}
