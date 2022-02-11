@@ -5,19 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="home.css" />
+  <title>Star Wars</title>
   <style>
-    body {
-      background-color: black;
-    }
-
-    #clip-triangle {
-      background-color: white;
-      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    #perspective {
       perspective: 380px;
       perspective-origin: bottom;
-      position: relative;
-      width: 600px;
-      height: 520px;
     }
 
     #Textinhalt {
@@ -36,8 +29,8 @@
   <title>Star Wars</title>
 </head>
 
-<body>
-  <div id="clip-triangle">
+<body class="has-background-dark">
+  <div id="perspective" class="wrapper">
     <div id="Textinhalt">
       <h1>Star Wars Text</h1>
       <p>
@@ -106,7 +99,7 @@
 </body>
 
 <script>
-  dragElement(document.getElementById("clip-triangle"));
+  dragElement(document.getElementById("perspective"));
 
   var initialTransform = 920;
 
