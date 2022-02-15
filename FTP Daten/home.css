@@ -8,18 +8,14 @@
   position: absolute;
 }
 
+#gallery{
+  background: none;
+  background-color: black;
+}
+
 .triframe{
   position: absolute;
   pointer-events: none;
-}
-
-.gallery-wrapper{
-  margin-top: 27px!important;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  background-color:rgb(92,92,92);
-  width: 600px;
-  height: 520px;
-  position: absolute;
 }
 
 .apps {
