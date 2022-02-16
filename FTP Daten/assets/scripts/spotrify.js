@@ -71,6 +71,10 @@ audio.addEventListener('timeupdate', () => {
     seekSlider.style.backgroundSize = (time - seekSlider.min) * 100 / (seekSlider.max - seekSlider.min) + '% 100%'
   });
 
+audio.addEventListener('ended', ()=>{
+    updateTrack(1);
+})
+
 seekSlider.addEventListener('change', () => {
     audio.currentTime = seekSlider.value;
     currentContainer.textContent = calculateTime(audio.currentTime)
