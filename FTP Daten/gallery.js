@@ -6,21 +6,30 @@ let imageAngles = [0, -60, -120, -180, -240, -300];
 let appContainerDiv = document.getElementById("appContainer");
 let sliderDiv = document.getElementById("slider");
 let imgViewDiv = document.getElementById("img-view");
+let menu = document.querySelector(".menu");
 
   function openNav(){
+    menu.classList.toggle("active");
     if (!navOpen){
         /* document.getElementById("nav").style.height ="100%"
         document.getElementById("nav").style.width = "100%" */
-        document.getElementById("nav").style.left = "0"
-        appContainerDiv.style.width = "75%"
+        document.getElementById("info").style.left = "74.7%";
+      document.getElementById("event").style.left = "66.4%";
+      document.getElementById("chat").style.left = "58.1%";
+      document.getElementById("settings").style.left = "49.8%";
+      document.getElementById("home").style.left = "41.5%";
+        
         imgViewDiv.style.transform = `translate(-375px, -125px)  scale(0.75, 0.75) rotate(${handleAngle(angle)}deg)`;
         navOpen = true;
     }
     else{
       /* document.getElementById("nav").style.height = "0%"
       document.getElementById("nav").style.width = "0%" */
-      document.getElementById("nav").style.left = "50%"
-      appContainerDiv.style.width = "100%"
+      document.getElementById("info").style.left = "100%";
+      document.getElementById("event").style.left = "100%";
+      document.getElementById("chat").style.left = "100%";
+      document.getElementById("settings").style.left = "100%";
+      document.getElementById("home").style.left = "100%";
       navOpen = false;
       imgViewDiv.style.transform = `translateX(-300px) rotate(${handleAngle(angle)}deg) `;
     }  

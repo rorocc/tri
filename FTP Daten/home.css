@@ -9,12 +9,14 @@
   overflow: hidden;
 }
 
-#gallery{
+#gallery {
   background: none;
   background-color: black;
 }
-
-.triframe{
+#img-view {
+  transition: transform 1s;
+}
+.triframe {
   position: absolute;
   pointer-events: none;
 }
