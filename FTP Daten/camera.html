@@ -7,10 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-  <link rel="stylesheet" href="assets/styles/gallery.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="swipedetection.js"></script>
-  <script src="gallery.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
@@ -18,22 +15,8 @@
 </head>
 
 <body class="has-background-dark">
-    <div class="wrapper" id="gallery">
-    <div id="appContainer" class="apps">
-      
-      <div id="topbar"><p>Galerie</p></div>
-      <div id="slider">
-          <img class="img-selected" id="img-0" onclick="sliderClickHandler(0)" src="assets/gallery/vacation1.jpg">
-          <img class="slider-img" id="img-1" onclick="sliderClickHandler(1)" src="assets/gallery/vacation2.jpg">
-          <img id="img-2" onclick="sliderClickHandler(2)" src="assets/gallery/vacation3.jpg">
-          <img id="img-3" onclick="sliderClickHandler(3)" src="assets/gallery/vacation4.jpg">
-          <img id="img-4" onclick="sliderClickHandler(4)" src="assets/gallery/vacation5.jpg">
-          <img id="img-5" onclick="sliderClickHandler(5)" src="assets/gallery/vacation6.jpg">
-      </div>
-      <img id="img-view" ontouchmove="calcRotation(event)" ontouchstart="setTouchState(true)" ontouchend="setTouchState(false)" src="assets/gallery/wheel.png">
-    </div>
-
-   
+  <div class="wrapper">
+    <video autoplay="true" id="videoElement" height="100%"></video>
     <div class="menu">
       <div id="menu" class="menuButton has-text-centered has-text-white" onclick="openNav()">
         <svg id="toggle"
@@ -106,7 +89,7 @@
   
       </div>
       <!-- Home Button -->
-      <a onclick="openNav()" href="index2.html" id="home"
+      <a onclick="openNav()" href="home.html" id="home"
         style="height: 86px; width: 50%; position: absolute; left:100%; top:344px">
   
         <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
@@ -122,9 +105,56 @@
       </a>
     </div>
     </div> 
-  </div>
+
 
   <img class="triframe" src="assets/frame.png">
 </body>
+<script>
+    let video = document.getElementById("videoElement")
+
+    if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+
+
+let navOpen = false;
+  let menu = document.querySelector(".menu");
+  function openNav() {
+    menu.classList.toggle("active");
+    console.log("CLICK")
+    if (!navOpen) {
+      
+      document.getElementById("info").style.left = "74.7%";
+      document.getElementById("event").style.left = "66.4%";
+      document.getElementById("chat").style.left = "58.1%";
+      document.getElementById("settings").style.left = "49.8%";
+      document.getElementById("home").style.left = "41.5%";
+
+      video.style.width = "85%"
+      
+
+      navOpen = true;
+    }
+    else {
+      document.getElementById("info").style.left = "100%";
+      document.getElementById("event").style.left = "100%";
+      document.getElementById("chat").style.left = "100%";
+      document.getElementById("settings").style.left = "100%";
+      document.getElementById("home").style.left = "100%";
+
+      video.style.width = "100%"
+      
+      navOpen = false;
+
+    }
+
+  }
+</script>
 
 </html>
