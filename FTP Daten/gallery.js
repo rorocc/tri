@@ -18,7 +18,7 @@ let menu = document.querySelector(".menu");
       document.getElementById("chat").style.left = "58.1%";
       document.getElementById("settings").style.left = "49.8%";
       document.getElementById("home").style.left = "41.5%";
-        
+      appContainerDiv.style.width ="75%";
         imgViewDiv.style.transform = `translate(-375px, -125px)  scale(0.75, 0.75) rotate(${handleAngle(angle)}deg)`;
         navOpen = true;
     }
@@ -30,6 +30,7 @@ let menu = document.querySelector(".menu");
       document.getElementById("chat").style.left = "100%";
       document.getElementById("settings").style.left = "100%";
       document.getElementById("home").style.left = "100%";
+      appContainerDiv.style.width ="100%";
       navOpen = false;
       imgViewDiv.style.transform = `translateX(-300px) rotate(${handleAngle(angle)}deg) `;
     }  
