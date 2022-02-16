@@ -23,9 +23,15 @@
             <div id="topbar"><p>Meine Playlist</p></div>
             <div id="audio-sidebar-controls">
               <div class="audio-top-row">
-                <input type="range" id="audio-seek-slider" max="100" value="70">
+                <span id="current-time" class="time">0:00</span>
+                <input type="range" id="audio-seek-slider" max="100" value="0">
+                <span id="duration" class="time">0:00</span>
               </div>
-                  <button class="audio-btn" id="playBtn"><span>▶</span></button>        
+              <div class="audio-bottom-row">
+                <button class="audio-btn" id="btn"><span>ᐸ</span></button> 
+                <button class="audio-btn" id="playBtn"><span id="playIcon">▶</span></button>
+                <button class="audio-btn" id="btn"><span>ᐳ</span></button>   
+              </div>
             </div>
             <div id="audio-player-container">
               <audio src="assets/cosmic-geometry-5632.mp3" preload="metadata"></audio>
