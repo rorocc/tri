@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Document</title>
 </head>
 
@@ -21,20 +22,32 @@
     <div class="wrapper" id="spotrify">
     <div id="appContainer" class="apps">
             <div id="topbar"><p>Meine Playlist</p></div>
+                <div id="audio-info">
+                  <div id="artist-info">
+                    <div>
+                      <p id="track-title">Cosmic Geometry</p>
+                      <p id="artist-name">atherrasool1111</p>
+                    </div>
+                    </div>
+                      <div id="audio-album-img">
+                        <img id="album-img" src="assets/covers/tri_cosmetic.png">
+                      </div>
+                  </div>
+              
+            
             <div id="audio-sidebar-controls">
               <div class="audio-top-row">
-                <span id="current-time" class="time">0:00</span>
+                <button class="preskip-btn" id="btn" onclick="updateTrack(-1)"><img src="assets/skip_next.svg"></button> 
+                <button class="audio-btn" id="playBtn"><span id="playIcon">▶</span></button>
+                <button class="skip-btn" id="btn"  onclick="updateTrack(1)"><img src="assets/skip_next.svg"></button>  
+                  <span id="current-time" class="time">0:00</span>
                 <input type="range" id="audio-seek-slider" max="100" value="0">
                 <span id="duration" class="time">0:00</span>
+                 
+              </div>                
               </div>
-              <div class="audio-bottom-row">
-                <button class="audio-btn" id="btn"><span>ᐸ</span></button> 
-                <button class="audio-btn" id="playBtn"><span id="playIcon">▶</span></button>
-                <button class="audio-btn" id="btn"><span>ᐳ</span></button>   
-              </div>
-            </div>
             <div id="audio-player-container">
-              <audio src="assets/cosmic-geometry-5632.mp3" preload="metadata"></audio>
+              <audio id="audioplayer" preload="metadata"></audio>
             </div>
       
     </div>

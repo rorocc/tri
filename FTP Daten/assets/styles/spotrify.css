@@ -1,5 +1,3 @@
-
-
 #topbar{
     background-color: #212121;
     position: relative;
@@ -12,18 +10,55 @@
     color: #b3b3b3;
 }
 
+#audio-info{
+    width: 100%;
+    transform: translateX(-10%)
+}
+
+#audio-info-inner{
+    margin: 0 auto;
+    width:auto;
+}
+
+#audio-album-img{
+    display: flex;
+    justify-content: center;
+}
+
+#audio-album-img img{
+    width:50%;
+}
+
+#track-title{
+    color:white;
+}
+
+#artist-name{
+    font-size: 12px;
+}
+
 #audio-sidebar-controls{
-    width:70%;
-    transform: translate(150px, 100px) rotate(-60deg);
+    z-index: 0;
+    position: absolute;
+    top:50%;
+    left:30%;
+    width:80%;
+    transform: translateY(-90px) rotate(-60deg);
+}
+
+#artist-info{
+    margin:2% 0;
+    display: flex;
+    justify-content: center;
+}
+
+#artist-info p{
+    line-height: 100%;
+    grid-row: 1;
 }
 
 .audio-top-row{
     padding: 15px;
-}
-
-.audio-bottom-row{
-    display: block;
-    margin: auto;
 }
 
 #playBtn{
@@ -43,6 +78,25 @@
 
   .audio-btn{
       transform: rotate(60deg);
+  }
+
+  .time{
+    display: inline-block;
+    transform: rotate(60deg);
+   }
+
+  .skip-btn{
+    background: none;
+    border: none;
+    text-decoration: none;
+    transform: rotate(60deg);
+  }
+
+  .preskip-btn{
+    background: none;
+    border: none;
+    text-decoration: none;
+    transform: rotate(60deg) scaleX(-1);
   }
 
  input[type="range"] {
