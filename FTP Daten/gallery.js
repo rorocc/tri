@@ -1,8 +1,9 @@
-let navOpen = false;
-let touchActive = false;
-let touchTemp, angle = 0;
+let navOpen = false; // is the navbar opened?
+let touchActive = false; // is a touch event happening?
+let touchTemp; // touchTemp = "previous" touch point
+let angle = 0; // current rotation angle of the image wheel
 let rotationMemory = 0, imageIndex = 0; imageIndexBefore = 0;
-let imageAngles = [0, -60, -120, -180, -240, -300];
+let imageAngles = [0, -60, -120, -180, -240, -300]; // image rotation breakpoints
 let appContainerDiv = document.getElementById("appContainer");
 let sliderDiv = document.getElementById("slider");
 let imgViewDiv = document.getElementById("img-view");
@@ -14,6 +15,9 @@ let imgViewDiv = document.getElementById("img-view");
         document.getElementById("nav").style.left = "0"
         appContainerDiv.style.width = "75%"
         imgViewDiv.style.transform = `translate(-375px, -125px)  scale(0.75, 0.75) rotate(${handleAngle(angle)}deg)`;
+
+        console.log(" --- rotationMemory ", rotationMemory/4, " --- angle ", angle)
+        
         navOpen = true;
     }
     else{
@@ -26,15 +30,26 @@ let imgViewDiv = document.getElementById("img-view");
     }  
   }
 
+  /**
+   * Gets triggered when clicked on a preview thumbnail, sets the image by index
+   * @param {index of the clicked image} idx 
+   */
   function sliderClickHandler(idx){
     sliderDiv.classList.remove("slider-closed")
     setImageIndex(idx)
+    handleAngle(imageAngles[idx])
 
     rotationMemory = imageAngles[idx]*4;
+
+    console.log("clicked ", idx, " --- rotationMemory ", rotationMemory/4, " --- angle ", angle, " --- actual imageAngle ", imageAngles[idx])
     
     setImage(imageAngles[idx]);
   }
 
+  /**
+   * Sets the img-selected class on the selected image, removing on the image before
+   * @param {Index of the current image} idx 
+   */
   function setImageIndex(idx){
     imageIndexBefore = imageIndex;
     imageIndex = idx;
@@ -43,6 +58,10 @@ let imgViewDiv = document.getElementById("img-view");
     document.getElementById(`img-${imageIndex}`).classList.toggle("img-selected")
   }
 
+  /**
+   * Rotates to the selected image & scrolls the slider so the image is visible
+   * @param {The angle/degree of the image} angle 
+   */
   function setImage(angle){
     if(navOpen){
       imgViewDiv.style.transform = `translate(-380px, -100px) scale(0.75, 0.75) rotate(${handleAngle(angle)}deg)`;
@@ -59,6 +78,10 @@ let imgViewDiv = document.getElementById("img-view");
     });
   }
 
+  /**
+   * Calculates the rotation of the image wheel by calculating the difference of two consecutive touch points
+   * @param {Touch event} e 
+   */
   function calcRotation(e){
     let rotation;
     if(touchTemp){
@@ -101,23 +124,25 @@ let imgViewDiv = document.getElementById("img-view");
     return imageAngles[imageIndex];
   }
 
+  /**
+   * Setting if a touch event is happening, so that consecutive touch points can be saved and compared
+   * @param {Boolean describing if touch event is happening} bool 
+   */
   function setTouchState(bool){
     touchActive = bool;
 
     if(!bool){
-      touchTemp = null;
+      touchTemp = null; // no touch event = no "previous" touch point
       setImage(handleAngle(angle))
     }else{
-      //sliderDiv.classList.add("transition-class");
-      sliderDiv.classList.add("slider-closed")
-      setTimeout(()=>{
-        //sliderDiv.classList.remove("transition-class");
-      },500)
-      
+      sliderDiv.classList.add("slider-closed") // minimizing the slider bar when swiping through the images 
     }
   }
 
-
+  /**
+   * CURRENTLY NOT IN USE ---
+   * detecting quick swipe, using swipedetection.js
+   */
   swipedetect(imgViewDiv, function(swipedir){
       console.log(swipedir)
     switch (swipedir) {
