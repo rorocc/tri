@@ -13,9 +13,7 @@
   background: none;
   background-color: black;
 }
-#img-view {
-  transition: transform 1s;
-}
+
 .triframe {
   position: absolute;
   pointer-events: none;
@@ -48,7 +46,7 @@ html {
   fill: #8460ed;
 }
 #menu {
-  background: #000000aa;
+  background: #181818;
 }
 .grid {
   display: grid;
@@ -125,6 +123,8 @@ html {
 
 #info {
   transition: 0.7s;
+  /* transform-origin: 50px 0;
+  transform: rotate(-60deg); */
 }
 #event {
   transition: 0.6s;
@@ -140,7 +140,19 @@ html {
 }
 #toggle {
   transition: 0.5s;
+  z-index: 1000;
 }
 #videoElement {
   transition: 0.5s;
+}
+
+.sidebar svg polygon {
+  fill: #181818;
+  stroke: white;
+  stroke-width: 0.5;
+}
+
+#app-image {
+  transition: 0.7s;
+  width: 100%;
 }
