@@ -145,7 +145,6 @@
     function elementDragTouch(e) {
       console.log("elementDrag");
       e = e || window.event;
-      e.preventDefault();
       // calculate the new cursor position:
       pos2 = pos4 - e.touches[0].clientY;
       pos4 = e.touches[0].clientY;

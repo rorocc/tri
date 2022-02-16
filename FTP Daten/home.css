@@ -13,6 +13,12 @@
   background: none;
   background-color: black;
 }
+
+#spotrify{
+  background: none;
+  background-color: #121212;
+}
+
 #img-view {
   transition: transform 1s;
 }
