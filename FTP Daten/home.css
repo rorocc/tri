@@ -2,11 +2,12 @@
   margin-top: 27px;
   margin-left: 27px;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-  background: linear-gradient(45deg, #8460ed, #ff1252);
-  width: 600px;
+   width: 600px;
   height: 520px;
   position: absolute;
   overflow: hidden;
+  background-image: url(assets/bg.png);
+  background-size: cover;
 }
 
 #gallery {
@@ -46,7 +47,7 @@ html {
 }
 #appContainer {
   z-index: 1000;
-}
+ }
 #triangle {
   fill: #8460ed;
 }
