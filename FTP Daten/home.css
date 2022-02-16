@@ -14,7 +14,7 @@
   background-color: black;
 }
 
-#spotrify{
+#spotrify {
   background: none;
   background-color: #121212;
 }
@@ -159,5 +159,10 @@ html {
 
 #app-image {
   transition: 0.7s;
+  width: 100%;
+}
+
+#map {
+  height: 520px;
   width: 100%;
 }

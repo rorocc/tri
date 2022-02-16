@@ -132,7 +132,7 @@
 
     </div>
     <!-- Home Button -->
-    <a class="sidebar" onclick="openNav()" href="index2.html" id="home"
+    <a class="sidebar" onclick="openNav()" href="home.html" id="home"
       style="height: 86px; width: 50%; position: absolute; left:100%; top:344px">
 
       <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
@@ -156,7 +156,7 @@
 			var h=$(this).height();
 			for (i=h;i>0;i--) {
 				b=Math.round(i/Math.sqrt(3));
-        console.log("Breite" + b);
+        //console.log("Breite" + b);
                 $(this).prepend('<div class="left" style="width:'+(b+10)+'px;" />');
                 $(this).prepend('<div class="right" style="width:'+b+'px;" />');
                 
