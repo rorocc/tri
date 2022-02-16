@@ -17,33 +17,7 @@
 <body class="has-background-dark">
   <div class="wrapper">
 
-
-    <div id="appContainer" class="apps">
-      <div id="grid" class="grid px-6">
-
-        <a class="col has-text-centered has-text-white" href="index2.html"> Nachrichten
-          <img id="triangle" src="icons\chat2_icon.svg" alt="" width="90%">
-        </a>
-        <a class="col has-text-centered has-text-white" href="trinstagram.html"> Trinstagram<img id="triangle"
-            src="icons\calendar_icon.svg" alt="" width="90%"></a>
-        <a class="col has-text-centered has-text-white" href="camera.html"> Kamera<img id="triangle"
-            src="icons\camera_icon.svg" alt="" width="90%"></a>
-        <a class="col has-text-centered has-text-white" href="trictoc.html"> TricToc<img id="triangle"
-            src="icons\chat_icon.svg" alt="" width="90%"></a>
-        <a class="col has-text-centered has-text-white" href="index2.html"> Kontakte<img id="triangle"
-            src="icons\contacts_icon.svg" alt="" width="90%"></a>
-        <a class="col has-text-centered has-text-white" href="index2.html"> Spiele<img id="triangle"
-            src="icons\game_icon.svg" alt="" width="90%"></a>
-        <a class="col has-text-centered has-text-white" href="index2.html"> Gesundheit<img id="triangle"
-            src="icons\heart_icon.svg" alt="" width="90%"></a>
-        <a class="col has-text-centered has-text-white" href="gallery.html"> Bilder<img id="triangle"
-            src="icons\image_icon.svg" alt="" width="90%"></a>
-        <a class="col has-text-centered has-text-white" href="natrigation.html"> Natrigation<img id="triangle"
-            src="icons\paperplane_icon.svg" alt="" width="90%"></a>
-
-
-      </div>
-    </div>
+    <img id="app-image" src="assets/gallery/Natrigation.png" alt="">
 
     <div class="menu">
     <div id="menu" class="menuButton has-text-centered has-text-white" onclick="openNav()">
@@ -117,7 +91,7 @@
 
     </div>
     <!-- Home Button -->
-    <a class="sidebar" onclick="openNav()" href="index2.html" id="home"
+    <a class="sidebar" onclick="openNav()" href="home.html" id="home"
       style="height: 86px; width: 50%; position: absolute; left:100%; top:344px">
 
       <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
@@ -150,8 +124,8 @@
       document.getElementById("chat").style.left = "58.1%";
       document.getElementById("settings").style.left = "49.8%";
       document.getElementById("home").style.left = "41.5%";
-      document.getElementById("appContainer").style.width = "85%"
-      document.getElementById("grid").style["grid-template-rows"] = "90px 90px 90px"
+      document.getElementById("app-image").style.width="83%"
+     
 
       navOpen = true;
     }
@@ -161,8 +135,8 @@
       document.getElementById("chat").style.left = "100%";
       document.getElementById("settings").style.left = "100%";
       document.getElementById("home").style.left = "100%";
-      document.getElementById("appContainer").style.width = "100%"
-      document.getElementById("grid").style["grid-template-rows"] = "120px 120px 120px"
+      document.getElementById("app-image").style.width="100%"
+      
       navOpen = false;
 
     }
