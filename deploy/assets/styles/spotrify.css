@@ -1,13 +1,47 @@
 #topbar{
     background-color: #212121;
-    position: relative;
     top:0;
+    z-index: 1;
+    position: relative;
     height:auto;
     flex-grow: 1;
     width: 100%;
     text-align: center;
     padding:5px;
     color: #b3b3b3;
+}
+
+#info{
+    z-index: 100;
+}
+
+#audio-album-img{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 27%;
+    }
+
+#audio-album-img img{
+    width:50%;
+    transition: 0.5s ease-out;
+    position: absolute;
+}
+
+.current-img{
+    opacity: 1;
+    transform: none;
+}
+
+.last-img{
+    transform-origin: center center;
+    transform: translate(-55%, 25%) rotate(-60deg);
+}
+
+.next-img{
+    opacity: 0;
+    transform-origin: center center;
+    transform: translate(55%,25%) rotate(60deg);
 }
 
 #audio-info{
@@ -20,17 +54,9 @@
     width:auto;
 }
 
-#audio-album-img{
-    display: flex;
-    justify-content: center;
-}
-
-#audio-album-img img{
-    width:50%;
-}
-
 #track-title{
     color:white;
+    padding-bottom: 2px;
 }
 
 #artist-name{
@@ -38,18 +64,19 @@
 }
 
 #audio-sidebar-controls{
-    z-index: 0;
+    background-color: 	#121212;
     position: absolute;
     top:50%;
     left:30%;
     width:80%;
+    height:20%;
+    transition: 0.5s;
     transform: translateY(-90px) rotate(-60deg);
 }
 
 #artist-info{
-    margin:2% 0;
-    display: flex;
-    justify-content: center;
+    margin-left:50%;
+    margin: 2% 0 2% 27%;
 }
 
 #artist-info p{
