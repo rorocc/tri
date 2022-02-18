@@ -39,6 +39,14 @@
   clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
+
+.triangle-div {
+  height:98px;
+  width:100%;
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
 /* .buttonrow {
   height: 173.333333333px;
 } */

@@ -16,7 +16,7 @@
 
 <body class="has-background-dark">
   <div class="wrapper">
-    <video autoplay="true" id="videoElement" height="100%"></video>
+    <video autoplay muted hidden playsinline id="videoElement" height="100%"></video>
     <div class="menu">
       <div id="menu" class="menuButton has-text-centered has-text-white" onclick="openNav()">
         <svg id="toggle"
@@ -112,15 +112,27 @@
 <script>
     let video = document.getElementById("videoElement")
 
-    if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
+    async function setupCamera(){
+
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+        video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+          console.log("Something went wrong!");
+        });
+      }
+
+      return new Promise((resolve) => {
+          video.onloadedmetadata = () => {
+              resolve(video);
+          };
+    });   
+  }
+
+  await setupCamera();
+  video.play();
 
 
 let navOpen = false;
