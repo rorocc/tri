@@ -131,8 +131,12 @@
     });   
   }
 
-  await setupCamera();
-  video.play();
+  async function main(){
+    await setupCamera();
+    video.play();
+  }
+  
+  main();
 
 
 let navOpen = false;
