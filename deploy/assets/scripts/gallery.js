@@ -20,7 +20,7 @@ let menu = document.querySelector(".menu");
       document.getElementById("settings").style.left = "49.8%";
       document.getElementById("home").style.left = "41.5%";
       appContainerDiv.style.width ="75%";
-        imgViewDiv.style.transform = `translate(-375px, -125px)  scale(0.75, 0.75) rotate(${handleAngle(angle)}deg)`;
+        imgViewDiv.style.transform = `translate(-350px, -85px)  scale(0.75, 0.75) rotate(${imageAngles[imageIndex]}deg)`;
 
         console.log(" --- rotationMemory ", rotationMemory/4, " --- angle ", angle)
         
@@ -36,7 +36,7 @@ let menu = document.querySelector(".menu");
       document.getElementById("home").style.left = "100%";
       appContainerDiv.style.width ="100%";
       navOpen = false;
-      imgViewDiv.style.transform = `translateX(-300px) rotate(${handleAngle(angle)}deg) `;
+      imgViewDiv.style.transform = `translateX(-300px) rotate(${imageAngles[imageIndex]}deg) `;
     }  
   }
 
@@ -74,7 +74,7 @@ let menu = document.querySelector(".menu");
    */
   function setImage(angle){
     if(navOpen){
-      imgViewDiv.style.transform = `translate(-380px, -100px) scale(0.75, 0.75) rotate(${handleAngle(angle)}deg)`;
+      imgViewDiv.style.transform = `translate(-350px, -85px) scale(0.75, 0.75) rotate(${angle}deg)`;
     }else{
       imgViewDiv.style.transform = `translateX(-300px) rotate(${angle}deg) `;
     }
