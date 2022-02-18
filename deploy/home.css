@@ -23,6 +23,10 @@
 .triframe {
   position: absolute;
   pointer-events: none;
+  max-width: 654px;
+  max-height:574px;
+  min-width: 654px;
+  min-height:574px;
 }
 
 .apps {
