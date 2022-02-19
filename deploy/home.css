@@ -177,6 +177,16 @@ html {
   stroke-width: 0.5;
 }
 
+.sidebar.active svg polygon {
+  fill: #3f3f3f;
+}
+
+.sidebar img{
+  position: absolute; left:65px; top: 10px;
+  height: 40px;
+  width: 40px;
+}
+
 #app-image {
   transition: 0.7s;
   width: 100%;
@@ -185,4 +195,41 @@ html {
 #map {
   height: 520px;
   width: 100%;
+}
+
+label.hamburg { 
+  display: block;
+  width: 75px; height: 50px; 
+  position: relative; 
+  margin-left: auto; margin-right: auto;
+  border-radius: 4px; 
+}
+
+input#hamburg {display:none}
+
+.line { 
+   position: absolute; 
+   left:15px;
+   height: 4px; width: 55px; 
+   background: #fff; border-radius: 2px;
+   display: block; 
+   transition: 0.5s; 
+   transform-origin: center; 
+}
+
+.line:nth-child(1) { top: 14px; width: 45px;}
+.line:nth-child(2) { top: 26px; left: 20px; width: 35px;}
+.line:nth-child(3) { top: 38px; left: 25px; width: 25px;}
+
+#hamburg:checked + .hamburg .line:nth-child(1){
+   transform: translateY(12px) rotate(-45deg);
+}
+
+#hamburg:checked + .hamburg .line:nth-child(2){
+   opacity:0;
+}
+
+#hamburg:checked + .hamburg .line:nth-child(3){
+   transform: translateY(-12px) rotate(45deg);
+   width: 45px; left: 15px;
 }
