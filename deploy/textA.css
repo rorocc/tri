@@ -1,0 +1,102 @@
+.page1 {
+  background-color: #25c7c7;
+  background-image: linear-gradient(90deg, #25c7c7 0%, #fc00ff 100%);
+  z-index: 1;
+  border-color: black;
+  box-shadow: 10px 5px 5px black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  hyphens: auto;
+  transition: 0.7s;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.page1 .left {
+  height: 1px;
+  float: left;
+  clear: left;
+  top: 1px;
+  position: relative;
+}
+.page1 .right {
+  height: 1px;
+  float: right;
+  clear: right;
+  top: 1px;
+  position: relative;
+}
+h1 {
+  text-align: center;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.page2 {
+  background-color: #25c7c7;
+  background-image: linear-gradient(90deg, #25c7c7 0%, #fc00ff 100%);
+
+  border-color: black;
+  box-shadow: 10px 5px 5px black;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  position: absolute;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  hyphens: auto;
+  transition: 0.7s;
+  z-index: 2;
+}
+.page2 .left {
+  height: 1px;
+  float: left;
+  clear: left;
+  top: 1px;
+  position: relative;
+}
+.page2 .right {
+  height: 1px;
+  float: right;
+  clear: right;
+  top: 1px;
+  position: relative;
+}
+.page3 {
+  background-color: #25c7c7;
+  background-image: linear-gradient(90deg, #25c7c7 0%, #fc00ff 100%);
+
+  border-color: black;
+  box-shadow: 10px 5px 5px black;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  position: absolute;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  hyphens: auto;
+  transition: 0.7s;
+  z-index: 3;
+}
+.page3 .left {
+  height: 1px;
+  float: left;
+  clear: left;
+  top: 1px;
+  position: relative;
+}
+.page3 .right {
+  height: 1px;
+  float: right;
+  clear: right;
+  top: 1px;
+  position: relative;
+}

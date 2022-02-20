@@ -2,7 +2,7 @@
   margin-top: 27px;
   margin-left: 27px;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-   width: 600px;
+  width: 600px;
   height: 520px;
   position: absolute;
   overflow: hidden;
@@ -59,7 +59,7 @@ html {
 }
 #appContainer {
   z-index: 1000;
- }
+}
 #triangle {
   fill: #8460ed;
 }
@@ -168,7 +168,8 @@ html {
   z-index: 1000;
 }
 #videoElement {
-  transition: 0.5s;
+  width: 100%;
+  transition: 0.7s;
 }
 
 .sidebar svg polygon {
@@ -195,6 +196,9 @@ html {
 #map {
   height: 520px;
   width: 100%;
+}
+.sidebar {
+  z-index: 50;
 }
 
 label.hamburg { 
