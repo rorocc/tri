@@ -164,11 +164,11 @@
     swipedetect(page1, function(swipedir){
       console.log(swipedir)
     switch (swipedir) {
-        case "left":
-        page2.style.left ="0";
-        
+        case "up":
+        page2.style.top ="0";
+        page1.style.top ="-100%"
             break;
-        case "right":
+        case "down":
 
             break;
         default:
@@ -180,11 +180,13 @@
   swipedetect(page2, function(swipedir){
       console.log(swipedir)
     switch (swipedir) {
-        case "left":
-        page3.style.left ="0";
+        case "up":
+        page3.style.top ="0";
+        page2.style.top ="-100%"
             break;
-        case "right":
-        page2.style.left ="100%";
+        case "down":
+        page2.style.top ="100%";
+        page1.style.top ="0";
             break;
         default:
             break;
@@ -195,11 +197,12 @@
   swipedetect(page3, function(swipedir){
       console.log(swipedir)
     switch (swipedir) {
-        case "left":
+        case "up":
         
             break;
-        case "right":
-        page3.style.left ="100%";
+        case "down":
+        page3.style.top ="100%";
+        page2.style.top ="0";
             break;
         default:
             break;
