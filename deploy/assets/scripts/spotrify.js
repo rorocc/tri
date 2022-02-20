@@ -14,7 +14,7 @@ const currentContainer = document.getElementById('current-time');
 let menu = document.querySelector(".menu");
 let currentTrack = 0, nextTrack = 1, lastTrack = 2;
 let tracksArray = [{trackName: "Cosmetic Geometry", artist: "atherrasool1111", coverSrc: "tri_cosmetic.png", trackSrc: "cosmeticgeometry.mp3"},
-{trackName: "Lorem Ipsum", artist: "Jona K", coverSrc: "tri_jona.png", trackSrc: "cosmeticgeometry.mp3"},
+{trackName: "Space Flute", artist: "Jona K", coverSrc: "tri_jona.png", trackSrc: "Space_Flute.mp3"},
 {trackName: "Spirit Blossom", artist: "RomanBelov", coverSrc: "tri_spirit.png", trackSrc: "spiritblossom.mp3"}]
 
 updateTrack(0);
