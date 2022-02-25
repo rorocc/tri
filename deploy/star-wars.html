@@ -36,7 +36,8 @@
 </head>
 
 <body style="margin: 0px;">
-  <div id="perspective" class="wrapper">
+  <div class="wrapper">
+  <div id="perspective">
     <div id="Textinhalt">
       <h1 id="section1" class="title has-text-black-ter">Bermudadreieck</h1>
       <p>Das Bermudadreieck, auch Teufelsdreieck genannt, ist ein Seegebiet im Atlantik. Es liegt nördlich der Karibik
@@ -60,69 +61,69 @@
         detaillierter und fantastischer werden (auch wenn sie schon lange zurückliegen).
       </p>
     </div>
-
-    <div class="menu">
-      <div id="menu" class="menuButton has-text-centered has-text-white" onclick="openNav()">
-        <input type="checkbox" id="hamburg" onclick="openNav()">
-        <label for="hamburg" class="hamburg">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </label>
-      </div>
-
-      <!-- Info Button -->
-      <a class="sidebar" href="natrigation.html" id="info"
-        style="height: 86px; width: 50%; position: absolute; left:100%; top:0">
-        <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
-          <polygon points="0,86 50,0 300,0 300,86" />
-        </svg>
-        <img src="assets/icons-nav/map-regular.svg">
-        <p style="color: white; position: absolute; bottom: 10px; left: 45px">Maps</p>
-      </a>
-      <!-- Info Button -->
-      <a class="sidebar active" href="textA.html" id="event"
-        style="height: 86px; width: 50%; position: absolute; left:100%; top:86px">
-        <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
-          <polygon points="0,86 50,0 300,0 300,86" />
-        </svg>
-        <img src="assets/icons-nav/file-lines-regular.svg">
-        <p style="color: white; position: absolute; bottom: 10px; left: 50px">Text C</p>
-      </a>
-      <!-- Chat Button -->
-      <a class="sidebar" href="gallery.html" id="chat"
-        style="height: 86px; width: 50%; position: absolute; left:100%; top:172px">
-        <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
-          <polygon points="0,86 50,0 300,0 300,86" />
-        </svg>
-        <img src="assets/icons-nav/images-regular.svg">
-        <p style="color: white; position: absolute; bottom: 10px; left: 45px">Bilder</p>
-      </a>
-      <!-- Settings Button -->
-      <a class="sidebar" id="settings" href="spotrify.html"
-        style="height: 86px; width: 50%; position: absolute; left:100%; top:258px">
-        <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
-          <polygon points="0,86 50,0 300,0 300,86" />
-        </svg>
-        <img src="assets/icons-nav/spotify-brands.svg">
-        <p style="color: white; position: absolute; bottom: 10px; left: 40px">Spotrify</p>
-
-      </a>
-      <!-- Home Button -->
-      <a class="sidebar" onclick="openNav()" href="home.html" id="home"
-        style="height: 86px; width: 50%; position: absolute; left:100%; top:344px">
-
-        <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
-          <polygon points="0,86 50,0 300,0 300,86" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 24 24" width="50px" fill="#ffffff"
-          style="position: absolute; left:50px; top: 10px;">
-          <path d="M0 0h24v24H0V0z" fill="none" />
-          <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
-        </svg>
-        <p style="color: white; position: absolute; bottom: 10px; left: 50px">Home</p>
-      </a>
+  </div>
+  <div class="menu">
+    <div id="menu" class="menuButton has-text-centered has-text-white" onclick="openNav()">
+      <input type="checkbox" id="hamburg" onclick="openNav()">
+      <label for="hamburg" class="hamburg">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </label>
     </div>
+
+    <!-- Info Button -->
+    <a class="sidebar" href="natrigation.html" id="info"
+      style="height: 86px; width: 50%; position: absolute; left:100%; top:0">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
+        <polygon points="0,86 50,0 300,0 300,86" />
+      </svg>
+      <img src="assets/icons-nav/map-regular.svg">
+      <p style="color: white; position: absolute; bottom: 10px; left: 45px">Maps</p>
+    </a>
+    <!-- Info Button -->
+    <a class="sidebar active" href="textA.html" id="event"
+      style="height: 86px; width: 50%; position: absolute; left:100%; top:86px">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
+        <polygon points="0,86 50,0 300,0 300,86" />
+      </svg>
+      <img src="assets/icons-nav/file-lines-regular.svg">
+      <p style="color: white; position: absolute; bottom: 10px; left: 50px">Text C</p>
+    </a>
+    <!-- Chat Button -->
+    <a class="sidebar" href="gallery.html" id="chat"
+      style="height: 86px; width: 50%; position: absolute; left:100%; top:172px">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
+        <polygon points="0,86 50,0 300,0 300,86" />
+      </svg>
+      <img src="assets/icons-nav/images-regular.svg">
+      <p style="color: white; position: absolute; bottom: 10px; left: 45px">Bilder</p>
+    </a>
+    <!-- Settings Button -->
+    <a class="sidebar" id="settings" href="spotrify.html"
+      style="height: 86px; width: 50%; position: absolute; left:100%; top:258px">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
+        <polygon points="0,86 50,0 300,0 300,86" />
+      </svg>
+      <img src="assets/icons-nav/spotify-brands.svg">
+      <p style="color: white; position: absolute; bottom: 10px; left: 40px">Spotrify</p>
+
+    </a>
+    <!-- Home Button -->
+    <a class="sidebar" onclick="openNav()" href="home.html" id="home"
+      style="height: 86px; width: 50%; position: absolute; left:100%; top:344px">
+
+      <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
+        <polygon points="0,86 50,0 300,0 300,86" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 24 24" width="50px" fill="#ffffff"
+        style="position: absolute; left:50px; top: 10px;">
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
+      </svg>
+      <p style="color: white; position: absolute; bottom: 10px; left: 50px">Home</p>
+    </a>
+  </div>
 
   </div>
   <img class="triframe" src="assets/frame.png">
@@ -195,7 +196,7 @@
   let menu = document.querySelector(".menu");
   function openNav() {
     menu.classList.toggle("active");
-    console.log("CLICK")
+    //console.log("CLICK")
     if (!navOpen) {
 
       document.getElementById("info").style.left = "74.7%";
